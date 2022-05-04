@@ -1,0 +1,134 @@
+@keyframes fadeUp{
+    from{
+        transform: translateY(0px) scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(100px) scale(1);
+        opacity: 1;
+    }
+    
+}
+
+
+
+.box{
+    transform: translateY(100px);
+    animation: fadeUp 5s;
+    animation-iteration-count: 1;
+
+    width: 50%;
+    height: 50vh;
+    border: solid 5px red;
+    margin: 10% auto;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   
+    align-items: center;
+}
+html {
+    font-size: 40px;
+}
+
+
+/* unidades de medida css - px é sempre uma medida fixa.
+.box - colocamos uma medida fixa nela para o tamanho da fonte
+em - é uma medida relativa em relação ao tamanho definido no elemento pai. a largura da letra M no tamanho definido no pai.
+M em 40px equivale a 1em para os elementos filhos e descendentes;
+o padrão é 16px;
+rem-root em - é uma medida relativa em relação ao root que é a tag html.
+ usa como referência o body e não o pai.
+ % - é relativo em relação ao elemento pai.
+ em equivale a largura da letra M, no tamanho definido no Pai.
+*/
+
+.item {
+    width: 45px;
+    height: 45px;
+    background: #eee;
+    margin: 1%;
+    font-size: 2rem;
+    font-family: 'Roboto' , 'Lato' , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+.box:hover .item{
+    transform: translateX(200px) scale(2) rotate(360deg);
+    border-radius: 50%;
+    
+}
+/* .item:hover {
+    /* transform: scale(2); */
+    /* border-radius: 50%; } 
+    */
+
+/* .item.click {
+    transform: rotate(360deg);
+} */
+
+.a {
+    color: red;
+}
+.b {
+    color: green;
+}
+.c{
+    color: blue;
+}
+
+/* Transform - consigo mudar um elemento. transform muda a forma mas n mostra mudando.
+Transition - não muda a forma, ele mostra as alterações que ela sofre.
+animation - 
+ */
+
+
+ .picture{
+    width: 400px;
+    height: 400px;
+     margin: 0 auto; 
+     border: solid 1px red;
+     overflow: hidden; 
+     margin-bottom: 10%;
+     position: relative;
+
+     /* ao passar o mouse sobre .picture aplique um efeito no figcaption. botton 100px(no meu caso a imagem é esta resolução) */
+ }
+.picture:hover figcaption {
+    bottom: 100px;
+    transform: rotate(1440deg);
+}
+.picrure:hover img{
+    transform: scale(2);
+}
+ .picture > figure > img {
+     width: 100%;
+     transition-duration: 1.5s;
+ }
+ .picture > figure > figcaption {
+     width: 100%;
+     height: 100px;
+     padding-top: 1%;
+     background: #333;
+     color: #fff;
+     position: absolute;
+     bottom: -100px;
+     text-align: center;
+     transition-duration: 0.5s;
+ }
+ .picture>figure{
+     height: 400px;
+     position: relative;
+ }
+
+
+
+/* .picture .figcaption{
+    background: #333;
+    font-size: white;
+}
+.figcaption {
+    color:#eee
+} */

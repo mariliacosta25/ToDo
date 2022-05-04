@@ -42,6 +42,7 @@ getAllTasks(db);
 
 
 
+
 //console.log(db[0].title);
 // DOM - Document Object Model - é o JavaScript acessando o HTML e manipulando ele.
 // HTML ele é copilado pelo navegador em uma árvore de comandos, chamado DOM.
@@ -62,7 +63,7 @@ newTask.addEventListener("keyup", (e) => {
       if (!newTask.value) {
         alert("Digite uma nova tarefa, para adicionar.");
       } else {
-    alert(newTask.value);
+    // alert(newTask.value);
 
     const d = new Date();
     const today = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
@@ -74,6 +75,8 @@ newTask.addEventListener("keyup", (e) => {
       dueDate: today,
     });
 
+    document.querySelector(".tasks").innerHTML="";
+    getAllTasks(db);
 
     newTask.value = "";
     console.log(db);
